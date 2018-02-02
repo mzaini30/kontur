@@ -6,6 +6,13 @@ jQuery(function(){
 		favorable = $('#favorable').val();
 		unfavorable = $('#unfavorable').val();
 		opsi = $('#opsi').val();
+		data = $('#data').val();
+		hasil = $('#hasil');
+
+		// mulai
+
+		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+		favorable = favorable.split(',');
 
 	});
 });
