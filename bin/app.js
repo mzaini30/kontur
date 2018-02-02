@@ -13,23 +13,24 @@ jQuery(function(){
 
 		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
 		favorable = favorable.split(',');
-		// for (n in favorable){
-		// 	favorable[n]--;
-		// }
+		for (n in favorable){
+			favorable[n]--;
+		}
 
-		faunvorable = unfavorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+		unfavorable = unfavorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
 		unfavorable = unfavorable.split(',');
-		// for (n in unfavorable){
-		// 	unfavorable[n]--;
-		// }
+		for (n in unfavorable){
+			unfavorable[n]--;
+		}
 
-		blueprint = [];
+		blueprint = [] * (favorable.length + unfavorable.length);
 		for (n in favorable){
 			blueprint[n] = 'fav';
 		}
 		for (n in unfavorable){
 			blueprint[n] = 'unfav';
 		}
+		hasil.val(blueprint);
 
 		data = data.split('\n');
 		for (n in data){
@@ -121,7 +122,7 @@ jQuery(function(){
 			}
 			calon_hasil += '\n';
 		}
-		hasil.val(calon_hasil);
+		// hasil.val(calon_hasil);
 
 	});
 });
