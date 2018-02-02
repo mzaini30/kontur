@@ -30,5 +30,22 @@ jQuery(function(){
 			blueprint[n] = 'unfav';
 		}
 
+		data = data.split('\n');
+		for (n in data){
+			data[n] = data[n].split('\t');
+		}
+
+		opsi = opsi.split('\n');
+
+		skoring = [];
+
+		for (n in data){
+			for (u in blueprint){
+				if (opsi.length == 4){
+					
+				}
+			}
+		}
+
 	});
 });
