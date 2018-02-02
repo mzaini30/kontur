@@ -11,17 +11,24 @@ jQuery(function(){
 
 		// mulai
 
-		olah_fav_dan_unfav = function(variable){
-			var = var.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
-			var = var.split(',');
-			for (n in var){
-				var[n]--;
+		olah_fav_dan_unfav = function(variabel){
+			variabel = variabel.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+			variabel = variabel.split(',');
+			for (n in variabel){
+				variabel[n]--;
 			}
-			alert(var);
 		}
 
 		olah_fav_dan_unfav(favorable);
 		olah_fav_dan_unfav(unfavorable);
+
+		blueprint = [];
+		for (n in favorable){
+			blueprint[n] = 'fav';
+		}
+		for (n in unfavorable){
+			blueprint[n] = 'unfav';
+		}
 
 	});
 });
