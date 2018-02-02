@@ -96,17 +96,21 @@ jQuery(function(){
 
 		// to matrix: skoring
 
-		matrixify = function(arr, rows, cols) {
-		    var matrix = [];
-		    if (rows * cols === arr.length) {
-		        for(var i = 0; i < arr.length; i+= cols) {
-		            matrix.push(arr.slice(i, cols + i));
+		function listToMatrix(list, elementsPerSubArray) {
+		    var matrix = [], i, k;
+
+		    for (i = 0, k = -1; i < list.length; i++) {
+		        if (i % elementsPerSubArray === 0) {
+		            k++;
+		            matrix[k] = [];
 		        }
+
+		        matrix[k].push(list[i]);
 		    }
 
 		    return matrix;
-		};
-		matrixify(skoring, data, blueprint);
+		}
+		
 
 		calon_hasil = '';
 		for (n in data){
