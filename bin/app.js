@@ -110,7 +110,7 @@ jQuery(function(){
 
 		    return matrix;
 		}
-		
+		skoring = listToMatrix(skoring, blueprint.length);
 
 		calon_hasil = '';
 		for (n in data){
