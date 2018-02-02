@@ -31,7 +31,6 @@ jQuery(function(){
 		}
 
 		data = data.split('\n');
-		subyek = data.slice();
 		for (n in data){
 			data[n] = data[n].split('\t');
 		}
@@ -97,21 +96,17 @@ jQuery(function(){
 
 		// to matrix: skoring
 
-		function listToMatrix(list, elementsPerSubArray) {
-		    var matrix = [], i, k;
-
-		    for (i = 0, k = -1; i < list.length; i++) {
-		        if (i % elementsPerSubArray === 0) {
-		            k++;
-		            matrix[k] = [];
+		matrixify = function(arr, rows, cols) {
+		    var matrix = [];
+		    if (rows * cols === arr.length) {
+		        for(var i = 0; i < arr.length; i+= cols) {
+		            matrix.push(arr.slice(i, cols + i));
 		        }
-
-		        matrix[k].push(list[i]);
 		    }
 
 		    return matrix;
-		}
-		skoring = listToMatrix(skoring, blueprint.length)
+		};
+		matrixify(skoring, data, blueprint);
 
 		calon_hasil = '';
 		for (n in data){
