@@ -94,7 +94,16 @@ jQuery(function(){
 		}
 
 		skoring = [].concat.apply(skoring);
-		
+
+		calon_hasil = '';
+		for (n in data){
+			for (a in blueprint){
+				calon_hasil += skoring[n][a];
+				calon_hasil += '\t';
+			}
+			calon_hasil += '\n';
+		}
+		hasil.val(calon_hasil);
 
 	});
 });
