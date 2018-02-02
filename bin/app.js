@@ -39,10 +39,18 @@ jQuery(function(){
 
 		skoring = [];
 
-		for (n in data){
-			for (u in blueprint){
+		for (a in data){
+			for (n in blueprint){
 				if (opsi.length == 4){
-					
+					if (blueprint[n] == 'fav'){
+						if (data[a][n] == opsi[0]){
+							skoring.push('4');
+						} else if (data[a][n] == opsi[1]){
+							skoring.push('3');
+						} else if (data[a][n] == opsi[2]){
+							
+						}
+					}
 				}
 			}
 		}
