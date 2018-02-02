@@ -11,12 +11,17 @@ jQuery(function(){
 
 		// mulai
 
-		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
-		favorable = favorable.split(',');
-		for (n in favorable){
-			favorable[n]--;
+		olah_fav_dan_unfav = function(variable){
+			var = var.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+			var = var.split(',');
+			for (n in var){
+				var[n]--;
+			}
+			alert(var);
 		}
-		alert(favorable);
+
+		olah_fav_dan_unfav(favorable);
+		olah_fav_dan_unfav(unfavorable);
 
 	});
 });
