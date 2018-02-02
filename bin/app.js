@@ -13,15 +13,15 @@ jQuery(function(){
 
 		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
 		favorable = favorable.split(',');
-		for (n in favorable){
-			favorable[n]--;
-		}
+		// for (n in favorable){
+		// 	favorable[n]--;
+		// }
 
-		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
-		favorable = favorable.split(',');
-		for (n in favorable){
-			favorable[n]--;
-		}
+		faunvorable = unfavorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+		unfavorable = unfavorable.split(',');
+		// for (n in unfavorable){
+		// 	unfavorable[n]--;
+		// }
 
 		blueprint = [];
 		for (n in favorable){
