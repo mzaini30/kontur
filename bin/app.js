@@ -23,14 +23,13 @@ jQuery(function(){
 			unfavorable[n]--;
 		}
 
-		blueprint = [] * (favorable.length + unfavorable.length);
+		blueprint = [];
 		for (n in favorable){
-			blueprint[n] = 'fav';
+			blueprint[favorable[n]] = 'fav';
 		}
 		for (n in unfavorable){
-			blueprint[n] = 'unfav';
+			blueprint[unfavorable[n]] = 'unfav';
 		}
-		hasil.val(blueprint);
 
 		data = data.split('\n');
 		for (n in data){
@@ -122,7 +121,7 @@ jQuery(function(){
 			}
 			calon_hasil += '\n';
 		}
-		// hasil.val(calon_hasil);
+		hasil.val(calon_hasil);
 
 	});
 });
