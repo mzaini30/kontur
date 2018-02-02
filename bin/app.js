@@ -11,16 +11,17 @@ jQuery(function(){
 
 		// mulai
 
-		olah_fav_dan_unfav = function(variabel){
-			variabel = variabel.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
-			variabel = variabel.split(',');
-			for (n in variabel){
-				variabel[n]--;
-			}
+		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+		favorable = favorable.split(',');
+		for (n in favorable){
+			favorable[n]--;
 		}
 
-		olah_fav_dan_unfav(favorable);
-		olah_fav_dan_unfav(unfavorable);
+		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
+		favorable = favorable.split(',');
+		for (n in favorable){
+			favorable[n]--;
+		}
 
 		blueprint = [];
 		for (n in favorable){
