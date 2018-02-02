@@ -48,12 +48,52 @@ jQuery(function(){
 						} else if (data[a][n] == opsi[1]){
 							skoring.push('3');
 						} else if (data[a][n] == opsi[2]){
-							
+							skoring.push('2');
+						} else if (data[a][n] == opsi[3]){
+							skoring.push('1');
+						}
+					} else if (blueprint[n] == 'unfav'){
+						if (data[a][n] == opsi[0]){
+							skoring.push('1');
+						} else if (data[a][n] == opsi[1]){
+							skoring.push('2');
+						} else if (data[a][n] == opsi[2]){
+							skoring.push('3');
+						} else if (data[a][n] == opsi[3]){
+							skoring.push('4');
+						}
+					}
+				} else if (opsi.length == 5){
+					if (blueprint[n] == 'fav'){
+						if (data[a][n] == opsi[0]){
+							skoring.push('5');
+						} else if (data[a][n] == opsi[1]){
+							skoring.push('4');
+						} else if (data[a][n] == opsi[2]){
+							skoring.push('3');
+						} else if (data[a][n] == opsi[3]){
+							skoring.push('2');
+						} else if (data[a][n] == opsi[4]){
+							skoring.push('1');
+						}
+					} else if (blueprint[n] == 'unfav'){
+						if (data[a][n] == opsi[0]){
+							skoring.push('1');
+						} else if (data[a][n] == opsi[1]){
+							skoring.push('2');
+						} else if (data[a][n] == opsi[2]){
+							skoring.push('3');
+						} else if (data[a][n] == opsi[3]){
+							skoring.push('4');
+						} else if (data[a][n] == opsi[4]){
+							skoring.push('5');
 						}
 					}
 				}
 			}
 		}
+
+		console.log(skoring);
 
 	});
 });
