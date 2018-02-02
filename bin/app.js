@@ -93,7 +93,7 @@ jQuery(function(){
 			}
 		}
 
-		skoring = [].concat.apply(skoring);
+		// array 1 dimension to 2 dimension: skoring
 
 		calon_hasil = '';
 		for (n in data){
