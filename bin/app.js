@@ -13,6 +13,9 @@ jQuery(function(){
 
 		favorable = favorable.replace(/\n\n/g, ',').replace(/\n/g, ',').replace(/ /g, '');
 		favorable = favorable.split(',');
+		// for (n in favorable){
+		// 	favorable[n] = favorable[n] - 1;
+		// }
 
 	});
 });
