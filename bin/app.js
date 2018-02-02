@@ -93,7 +93,8 @@ jQuery(function(){
 			}
 		}
 
-		console.log(skoring);
+		skoring = [].concat.apply(skoring);
+		
 
 	});
 });
