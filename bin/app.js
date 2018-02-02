@@ -96,13 +96,14 @@ jQuery(function(){
 		skoring = [].concat.apply(skoring);
 
 		calon_hasil = '';
-		for (n in data){
-			for (a in blueprint){
-				calon_hasil += skoring[n][a];
-				calon_hasil += '\t';
-			}
-			calon_hasil += '\n';
-		}
+		// for (n in data){
+		// 	for (a in blueprint){
+		// 		calon_hasil += skoring[n][a];
+		// 		calon_hasil += '\t';
+		// 	}
+		// 	calon_hasil += '\n';
+		// }
+		calon_hasil += skoring[3];
 		hasil.val(calon_hasil);
 
 	});
