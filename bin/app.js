@@ -31,9 +31,11 @@ jQuery(function(){
 		}
 
 		data = data.split('\n');
+		subyek = data.slice();
 		for (n in data){
 			data[n] = data[n].split('\t');
 		}
+
 
 		opsi = opsi.split('\n');
 
@@ -109,7 +111,7 @@ jQuery(function(){
 
 		    return matrix;
 		}
-		listToMatrix(skoring, blueprint.length)
+		skoring = listToMatrix(skoring, blueprint.length)
 
 		calon_hasil = '';
 		for (n in data){
